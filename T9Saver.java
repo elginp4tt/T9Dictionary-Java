@@ -89,8 +89,7 @@ class T9Saver {
     // does not check for duplicates yet
     private TrieNode convertDictionaryToTrieNodes() throws FileNotFoundException, IOException {
         // get dictionary file from same folder as T9Saver.class
-        URL path = T9Saver.class.getResource("dictionary.txt");
-        File dictionary = new File(path.getFile());
+        File dictionary = new File("C:\\Users\\Elgin Patt\\Desktop\\T9Dictionary\\dictionary.txt");
         BufferedReader br = new BufferedReader(new FileReader(dictionary));
         String curWord = null;
         TrieNode root = new TrieNode();
