@@ -69,7 +69,6 @@ class T9Saver {
     // takes in a list delimited by \n previously saved by the program to generate
     // TrieNodes
     private TrieNode convertMappedDictionaryToTrieNodes() throws FileNotFoundException, IOException {
-        // get mapped dictionary file from same folder as T9Saver.class
         File dictionary = new File("C:\\Users\\Elgin Patt\\Desktop\\T9Dictionary\\mappedDictionary.txt");
         BufferedReader br = new BufferedReader(new FileReader(dictionary));
         String curLine = null;
@@ -87,7 +86,6 @@ class T9Saver {
     // TrieNodes
     // does not check for duplicates yet
     private TrieNode convertDictionaryToTrieNodes() throws FileNotFoundException, IOException {
-        // get dictionary file from same folder as T9Saver.class
         File dictionary = new File("C:\\Users\\Elgin Patt\\Desktop\\T9Dictionary\\dictionary.txt");
         BufferedReader br = new BufferedReader(new FileReader(dictionary));
         String curWord = null;

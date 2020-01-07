@@ -5,8 +5,8 @@ import java.util.PriorityQueue;
 class TrieNode {
     private static HashMap<Character, Character> t9HashMap = new HashMap<>(); // integer to character converter
     private HashMap<Character, TrieNode> children = new HashMap<>(); // references to children trienode instances
-    private PriorityQueue<Word> words = new PriorityQueue<Word>(1,
-            new WordComparator()); // references to t9 words on the node
+    private PriorityQueue<Word> words = new PriorityQueue<Word>(1, new WordComparator()); // references to t9 words on
+                                                                                          // the node
 
     public TrieNode() {
         populatet9HashMap();
