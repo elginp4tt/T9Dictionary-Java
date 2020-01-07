@@ -27,7 +27,7 @@ class Main {
                     String[] suggestions = root.suggest(t9String, suggestCount);
 
                     for (int counter = 0; counter < suggestions.length; counter++) {
-                        System.out.println(counter + ": " + suggestions[counter]);
+                        System.out.println(counter+1 + ": " + suggestions[counter]);
                     }
                     break;
                 case 2:

@@ -9,3 +9,4 @@ TO DO:
 Non-static filepath
 Weightage algorithm for suggestions
 Dynamic input checking (?)
+
