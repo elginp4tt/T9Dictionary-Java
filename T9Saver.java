@@ -70,8 +70,7 @@ class T9Saver {
     // TrieNodes
     private TrieNode convertMappedDictionaryToTrieNodes() throws FileNotFoundException, IOException {
         // get mapped dictionary file from same folder as T9Saver.class
-        URL path = T9Saver.class.getResource("mappedDictionary.txt");
-        File dictionary = new File(path.getFile());
+        File dictionary = new File("C:\\Users\\Elgin Patt\\Desktop\\T9Dictionary\\mappedDictionary.txt");
         BufferedReader br = new BufferedReader(new FileReader(dictionary));
         String curLine = null;
         TrieNode root = new TrieNode();
@@ -96,7 +95,7 @@ class T9Saver {
 
         while ((curWord = br.readLine()) != null) {
             root.insert(curWord, 0);
-            System.out.println(curWord + "has been inserted into dictionary");
+            System.out.println(curWord + " has been inserted into dictionary");
         }
         br.close();
         return root;

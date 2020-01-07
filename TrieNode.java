@@ -52,20 +52,21 @@ class TrieNode {
     }
 
     public TrieNode traverseAndAddNodes(String word) {
-        TrieNode trieNode = this;
+        TrieNode curNode = this;
 
         for (int counter = 0; counter < word.length(); counter++) {
             char curChar = word.charAt(counter);
             char curInteger = t9HashMap.get(curChar);
 
-            if (trieNode.children.containsKey(curInteger)) {
-                trieNode = trieNode.children.get(curInteger);
+            if (curNode.children.containsKey(curInteger)) {
+                curNode = curNode.children.get(curInteger);
             } else {
-                trieNode = new TrieNode();
-                trieNode.children.put(curInteger, trieNode);
+                TrieNode newNode = new TrieNode();
+                curNode.children.put(curInteger, newNode);
+                curNode = newNode;
             }
         }
-        return trieNode;
+        return curNode;
     }
 
     public void populatet9HashMap() {
